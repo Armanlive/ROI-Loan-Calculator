@@ -1,0 +1,141 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top for longer content */
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.calculator-container {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px; /* Max width for larger screens */
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.input-group input[type="number"] {
+    width: calc(100% - 22px); /* Account for padding and border */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Important for width calculation */
+}
+
+.input-group input[type="number"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.result-display {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.result-display p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.result-display span {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.error-message {
+    color: #D8000C; /* Red for errors */
+    background-color: #FFD2D2; /* Light red background */
+    border: 1px solid #D8000C;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-align: center;
+    display: none; /* Hidden by default */
+}
+
+footer {
+    background: #6b6464; /* Match form background */
+    color: #f5f9fc;      /* Match form text color */
+    text-align: center;
+    padding: 3px 0;      /* Decreased padding for less height */
+    border-top: 1px solid #e9ecef;
+    position: static;
+    width: 100%;
+    font-size: 0.95rem;  /* Slightly smaller font */
+    letter-spacing: 1px;
+    border-radius: 0 0 10px 10px;
+    margin-top: 8px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 28px;    /* Ensures vertical centering even with small text */
+}
+
+/* Optional: Adjustments for very small screens */
+@media (max-width: 360px) {
+    .calculator-container {
+        padding: 5px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .input-group input[type="number"], button {
+        font-size: 0.9em;
+    }
+    .result-display p {
+        font-size: 1.1em;
+    }
+}
+
